@@ -1,3 +1,9 @@
+# revision 18611
+# category Package
+# catalog-ctan /macros/latex/contrib/metalogo
+# catalog-date 2010-05-29 17:49:59 +0200
+# catalog-license lppl
+# catalog-version 0.12
 Name:		texlive-metalogo
 Version:	0.12
 Release:	1
@@ -46,6 +52,7 @@ Written especially for XeLaTeX users.
 #- source
 %doc %{_texmfdistdir}/source/latex/metalogo/metalogo.dtx
 %doc %{_texmfdistdir}/source/latex/metalogo/metalogo.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ Written especially for XeLaTeX users.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
