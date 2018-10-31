@@ -6,7 +6,7 @@
 # catalog-version 0.12
 Name:		texlive-metalogo
 Version:	0.12
-Release:	10
+Release:	11
 Summary:	Extended TeX logo macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metalogo
