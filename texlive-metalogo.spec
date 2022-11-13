@@ -1,19 +1,13 @@
-# revision 18611
-# category Package
-# catalog-ctan /macros/latex/contrib/metalogo
-# catalog-date 2010-05-29 17:49:59 +0200
-# catalog-license lppl
-# catalog-version 0.12
 Name:		texlive-metalogo
-Version:	0.12
-Release:	11
+Version:	18611
+Release:	1
 Summary:	Extended TeX logo macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metalogo
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ to the end user, to optimise the logos for different fonts.
 Written especially for XeLaTeX users.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,11 @@ Written especially for XeLaTeX users.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.12-2
-+ Revision: 753857
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.12-1
-+ Revision: 718996
-- texlive-metalogo
-- texlive-metalogo
-- texlive-metalogo
-- texlive-metalogo
-
