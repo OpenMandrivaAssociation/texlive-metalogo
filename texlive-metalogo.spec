@@ -1,6 +1,6 @@
 Name:		texlive-metalogo
 Version:	18611
-Release:	1
+Release:	2
 Summary:	Extended TeX logo macros
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metalogo
