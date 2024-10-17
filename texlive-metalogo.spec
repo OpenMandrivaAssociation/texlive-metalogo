@@ -3,7 +3,7 @@ Version:	18611
 Release:	2
 Summary:	Extended TeX logo macros
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metalogo
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/metalogo
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metalogo.doc.r%{version}.tar.xz
